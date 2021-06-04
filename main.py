@@ -45,10 +45,10 @@ with c1:
     st.markdown(f"<h3 style='text_align:center ;'>{pd.to_datetime(df1.index.values[len(df1)-1]).strftime('%d/%m/%y')}</h3>",unsafe_allow_html=True)
 with c2:
     st.subheader("**Close Price**")
-    st.markdown(f"<h3 style='text_align:center ; color:red'>{df1['Close'].values[len(df1)-1]+"USD"}</h3>",unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text_align:center ; color:red'>{df1['Close'].values[len(df1)-1]}+"USD"</h3>",unsafe_allow_html=True)
 with c3:
     st.subheader("**High Price**")
-    st.markdown(f"<h3 style='text_align:center ;'>{df1['High'].values[len(df1)-1]+"USD"}</h3>",unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text_align:center ;'>{df1['High'].values[len(df1)-1]}+"USD"</h3>",unsafe_allow_html=True)
 
 summary=Data.info['longBusinessSummary']
 st.header("**Business Summary**")
