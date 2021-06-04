@@ -40,12 +40,13 @@ st.markdown(logo,unsafe_allow_html=True)
 
 df1=Data.history(period='1d',start=(datetime.date.today()-datetime.timedelta(5)),end=(datetime.date.today()))
 c1,c2,c3=st.beta_columns(3)
+st.write("Note:- *All values in USD*")
 with c1:
     st.subheader("**Past close date**")
     st.markdown(f"<h3 style='text_align:center ;'>{pd.to_datetime(df1.index.values[len(df1)-1]).strftime('%d/%m/%y')}</h3>",unsafe_allow_html=True)
 with c2:
     st.subheader("**Close Price**")
-    st.markdown(f"<h3 style='text_align:center ; color:red'>{df1['Close'].values[len(df1)-1]}USD</h3>",unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text_align:center ; color:red'>{df1['Close'].values[len(df1)-1]}</h3>",unsafe_allow_html=True)
 with c3:
     st.subheader("**High Price**")
     st.markdown(f"<h3 style='text_align:center ;'>{df1['High'].values[len(df1)-1]}</h3>",unsafe_allow_html=True)
