@@ -38,9 +38,6 @@ df=Data.history(period='1d',start=start_date,end=end_date)
 logo='<img src=%s>' % Data.info['logo_url']
 st.markdown(logo,unsafe_allow_html=True)
 
-name=Data.info['longName']
-st.header("**%s**" % name)
-
 df1=Data.history(period='1d',start=(datetime.date.today()-datetime.timedelta(5)),end=(datetime.date.today()))
 c1,c2,c3=st.beta_columns(3)
 with c1:
